@@ -4,9 +4,12 @@
   
     src: url("./assets/tipografia/Amita/Amita-Regular.ttf") ;
 }
-.name{
+.logol{
     font-family: amita;
 }
 body{
     background-color: rgba(255, 239, 196, 1);
+}
+.titulo{
+    text-align:center;
 }

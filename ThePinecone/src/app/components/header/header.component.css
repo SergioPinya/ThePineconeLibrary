@@ -4,3 +4,8 @@ nav{
 img{
     width: 9em;
 }
+.logol{
+    text-decoration: none;
+    font-size: 50px;
+    color: rgba(119, 39, 34, 1);
+}
