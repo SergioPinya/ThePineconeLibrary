@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PoemasComponent } from './views/poemas/poemas.component';
 import { LibrosComponent } from './views/libros/libros.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LibroComponent } from './views/libros/libro/libro.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     FooterComponent,
     PoemasComponent,
-    LibrosComponent
+    LibrosComponent,
+    LibroComponent
   ],
   imports: [
     BrowserModule,
