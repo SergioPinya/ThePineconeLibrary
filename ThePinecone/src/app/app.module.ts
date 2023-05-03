@@ -8,6 +8,8 @@ import { PoemasComponent } from './views/poemas/poemas.component';
 import { LibrosComponent } from './views/libros/libros.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LibroComponent } from './views/libros/libro/libro.component';
+import { PoemaComponent } from './views/poemas/poema/poema.component';
+
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { LibroComponent } from './views/libros/libro/libro.component';
     HeaderComponent,
     FooterComponent,
     PoemasComponent,
+    PoemaComponent,
     LibrosComponent,
     LibroComponent
   ],
