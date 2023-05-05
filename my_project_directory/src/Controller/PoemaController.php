@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Noticias;
+use App\Entity\Poema;
 use App\Repository\PoemaRepository;
 
 use Doctrine\ORM\EntityManagerInterface;
@@ -25,7 +25,7 @@ class PoemaController extends AbstractController
       
         
         #[Route('/newPoe', name:'insertPoema')]
-        public function insertPoema(Request $request, PoemaRepository $repository): Response
+        public function insertPoema(Request $request, PoemaRepository $repository,EntityManagerInterface $doctrine): Response
         {
           if (count($request->request->all())){
     
@@ -34,7 +34,14 @@ class PoemaController extends AbstractController
     
           return $this->render('poema/index.html.twig', []);
         
-    }
+        }
+      /*   #[Route('/deletePoema/{id}', name: 'deletePoema')]
+        public function deleteNews($id, PoemaRepository $repository, EntityManagerInterface $doctrine): Response
+        {
+          $poema = $doctrine->getRepository(Poema::class)->find($id);
+          $repository->remove($poema, true);
+          return $this->redirectToRoute('list_news');
+        } */
 
    
     /* 

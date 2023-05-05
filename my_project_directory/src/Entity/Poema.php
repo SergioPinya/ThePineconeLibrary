@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\PoemaRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PoemaRepository::class)]
@@ -16,8 +17,8 @@ class Poema
     #[ORM\Column(length: 255)]
     private ?string $titulo = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $magen = null;
+    #[ORM\Column(length: 255)]
+    private ?string $imagen = null;
 
     #[ORM\Column(length: 255)]
     private ?string $texto = null;
@@ -39,14 +40,14 @@ class Poema
         return $this;
     }
 
-    public function getMagen(): ?string
+    public function getImagen(): ?string
     {
-        return $this->magen;
+        return $this->imagen;
     }
 
-    public function setMagen(?string $magen): self
+    public function setImagen(?string $imagen): self
     {
-        $this->magen = $magen;
+        $this->imagen = $imagen;
 
         return $this;
     }

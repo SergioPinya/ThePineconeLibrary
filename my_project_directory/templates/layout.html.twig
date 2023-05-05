@@ -1,18 +1,18 @@
 {% extends "base.html.twig" %}
 {% block layout %}
-<header class="jumbotron jumbotron-fluid mb-5">
+	<header class="jumbotron jumbotron-fluid mb-5">
 		<header>
 
 			<nav class="navbar navbar-expand-lg " style="background-color: rgba(191, 144, 88, 1);">
 				<div class="container-fluid">
 
 
-					<div class="col-xl-1 me-5">
+					<div class="col-xl-2 me-5">
 						<a class=" navbar-brand" href="">
 							<img class="logo" src="/assets/pine.svg" alt="logo">
 						</a>
 					</div>
-					<div class="col-xl-2">
+					<div class="col-xl-3">
 
 						<a href="" class="logol">The Pinecone Library</a>
 
@@ -36,8 +36,6 @@
 									</a>
 								</li>
 
-							
-
 
 							</ul>
 						</div>
@@ -46,24 +44,10 @@
 				</div>
 			</nav>
 
-</header>
+		</header>
 
 
-{% block content %}{% endblock %}
+		{% block content %}{% endblock %}
 
-<footer class="text-center text-lg-start " style="background-color:rgba(157, 74, 50, 1)">
-
-		<section class="">
-			<div class="container-fluid text-center text-md-start ">
-				<a>Quienes somos</a>
-			</div>
-		</section>
-
-		<div class="text-center p-4" style="background-color: rgba(119, 39, 34, 1);">
-			<p style="color: white;">© Copyright Pinecone 2023
-			</p>
-		</div>
-
-	</footer>
-
-{% endblock %}
+		
+	{% endblock %}

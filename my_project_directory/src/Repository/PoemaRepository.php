@@ -16,8 +16,10 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class PoemaRepository extends ServiceEntityRepository
 {
+    private $doctrine;
     public function __construct(ManagerRegistry $registry)
     {
+        $this->doctrine = $registry;
         parent::__construct($registry, Poema::class);
     }
 
@@ -37,6 +39,25 @@ class PoemaRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function insert($request): void
+    {
+
+        $file = $request->files->get('imagen');
+        $extension = "." . $file->getClientOriginalExtension();
+
+
+        $file->move('assets/img/tmp/', $file . $extension);
+
+        $poema = new Poema;
+
+        $poema
+                ->setTitulo($request->request->get('titulo'))
+                ->setTexto($request->request->get('texto'))
+                ->setImagen($file . $extension);
+        $this->doctrine->getManager()->persist($poema);
+        $this->doctrine->getManager()->flush();
     }
 
 //    /**

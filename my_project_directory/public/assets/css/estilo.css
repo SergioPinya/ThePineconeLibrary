@@ -5,13 +5,14 @@
 }
 .logol{
     font-family: amita;
+	text-decoration: none;
+	font-size: 50px;
+    color: rgba(119, 39, 34, 1);
 }
+	
 body{
     background-color: rgba(255, 239, 196, 1);
 }
 .titulo{
     text-align:center;
-}
-.logol{
-    text-decoration: none;
 }
