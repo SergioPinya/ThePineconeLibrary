@@ -4,9 +4,11 @@ a{
     float: right;
     background-color: brown;
     
-    border-radius: 30%;
-    width: 110px;
+    border-radius: 70%;
+    width: 140px;
     height: 30px;
+    padding-top:15px;
+    padding-bottom: 50px;
 }
 a:hover{
     color: black;
