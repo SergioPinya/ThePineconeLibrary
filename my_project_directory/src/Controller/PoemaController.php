@@ -20,12 +20,10 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/', name: 'app_poema')]
 class PoemaController extends AbstractController
 {
- 
-    
       
         
         #[Route('/newPoe', name:'insertPoema')]
-        public function insertPoema(Request $request, PoemaRepository $repository,EntityManagerInterface $doctrine): Response
+        public function insertPoema(Request $request, PoemaRepository $repository): Response
         {
           if (count($request->request->all())){
     
