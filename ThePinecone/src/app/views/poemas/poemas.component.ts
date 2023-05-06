@@ -6,8 +6,8 @@
 
  import { Component } from '@angular/core';
  
-/*  import { ApiRequestService } from "../../services/poema.service";
- */ 
+ import { PoemaService } from "../../services/poema.service";
+ 
   import { contents } from './poemas.interface';  
  @Component({
   selector: 'app-poemas',
@@ -19,14 +19,14 @@ export class PoemasComponent {
   public contents : any = contents;
   public counter: number = 1;
 
- /*  constructor (public service : ApiRequestService){}
+    constructor (public service : PoemaService){}
   ngOnInit(){
-    this.service.getNews().subscribe(response=>{
+    this.service.getPoema().subscribe(response=>{
 
       for (let i = 0; i < this.contents.length; i++) {
 
         this.contents[i] = {
-          imagen: "http://localhost:8000/assets/img/" + response[i].imagen,
+          imagen: "http://localhost:8001/assets/img/" + response[i].imagen,
           Titulo: response[i].Titulo,
           texto: response[i].texto
         };
@@ -34,6 +34,6 @@ export class PoemasComponent {
       }
 
     });
-  } */
+  }  
 }
  
