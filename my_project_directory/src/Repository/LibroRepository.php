@@ -2,28 +2,28 @@
 
 namespace App\Repository;
 
-use App\Entity\Poema;
+use App\Entity\Libro;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Poema>
+ * @extends ServiceEntityRepository<Libro>
  *
- * @method Poema|null find($id, $lockMode = null, $lockVersion = null)
- * @method Poema|null findOneBy(array $criteria, array $orderBy = null)
- * @method Poema[]    findAll()
- * @method Poema[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Libro|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Libro|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Libro[]    findAll()
+ * @method Libro[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PoemaRepository extends ServiceEntityRepository
-{
+class LibroRepository extends ServiceEntityRepository
+{   
     private $doctrine;
     public function __construct(ManagerRegistry $registry)
     {
         $this->doctrine = $registry;
-        parent::__construct($registry, Poema::class);
+        parent::__construct($registry, Libro::class);
     }
 
-    public function save(Poema $entity, bool $flush = false): void
+    public function save(Libro $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -32,7 +32,7 @@ class PoemaRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Poema $entity, bool $flush = false): void
+    public function remove(Libro $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -50,35 +50,38 @@ class PoemaRepository extends ServiceEntityRepository
 
         $file->move('assets/img/tmp', $file . $extension);
 
-        $poema = new Poema;
+        $libro = new Libro;
 
-        $poema
-                ->setTitulo($request->request->get('titulo'))
-                ->setTexto($request->request->get('texto'))
+        $libro
+                ->setTitol($request->request->get('titol'))
+                ->setDescripcion($request->request->get('descripcion'))
+                ->setContenido($request->request->get('contenido'))
+
                 ->setImagen($file . $extension);
-        $this->doctrine->getManager()->persist($poema);
+        $this->doctrine->getManager()->persist($libro);
         $this->doctrine->getManager()->flush();
     }
 
+
 //    /**
-//     * @return Poema[] Returns an array of Poema objects
+//     * @return Libro[] Returns an array of Libro objects
 //     */
 //    public function findByExampleField($value): array
 //    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
+//        return $this->createQueryBuilder('l')
+//            ->andWhere('l.exampleField = :val')
 //            ->setParameter('val', $value)
-//            ->orderBy('p.id', 'ASC')
+//            ->orderBy('l.id', 'ASC')
 //            ->setMaxResults(10)
 //            ->getQuery()
 //            ->getResult()
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Poema
+//    public function findOneBySomeField($value): ?Libro
 //    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
+//        return $this->createQueryBuilder('l')
+//            ->andWhere('l.exampleField = :val')
 //            ->setParameter('val', $value)
 //            ->getQuery()
 //            ->getOneOrNullResult()

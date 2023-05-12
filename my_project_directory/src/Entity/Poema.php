@@ -20,7 +20,7 @@ class Poema
     #[ORM\Column(length: 255)]
     private ?string $imagen = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type:"text")]
     private ?string $texto = null;
 
     public function getId(): ?int
