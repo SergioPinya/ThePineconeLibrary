@@ -4,6 +4,11 @@
   
     src: url("./assets/tipografia/Amita/Amita-Regular.ttf") ;
 }
+@font-face {
+    font-family: fenix;
+  
+    src: url("./assets/tipografia/Fenix/Fenix-Regular.ttf") ;
+}
 .logol{
     font-family: amita;
 }

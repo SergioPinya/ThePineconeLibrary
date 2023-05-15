@@ -14,3 +14,7 @@ a:hover{
     color: black;
     background-color: azure;
 }
+.card{
+    
+    background-color:  rgba(255, 239, 196, 1);
+}

@@ -9,7 +9,9 @@ import { LibrosComponent } from './views/libros/libros.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LibroComponent } from './views/libros/libro/libro.component';
 import { PoemaComponent } from './views/poemas/poema/poema.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ContenidoComponent } from './views/contenido/contenido.component';
+import { ContenidosComponent } from './views/contenido/contenidos/contenidos.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,15 @@ import { PoemaComponent } from './views/poemas/poema/poema.component';
     PoemasComponent,
     PoemaComponent,
     LibrosComponent,
-    LibroComponent
+    LibroComponent,
+    ContenidoComponent,
+    ContenidosComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,6 @@ import { Component,Input } from '@angular/core';
 })
 export class PoemaComponent {
   @Input() imagen: string="";
-  @Input() Titulo: string ="";
+  @Input() titulo: string ="";
   @Input() texto: string ="";
 }

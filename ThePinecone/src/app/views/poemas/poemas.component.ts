@@ -1,12 +1,8 @@
 
 
-
-
-
-
  import { Component } from '@angular/core';
  
- import { PoemaService } from "../../services/poema.service";
+ import { ApiRequestService } from "../../services/api-request.service";
  
   import { contents } from './poemas.interface';  
  @Component({
@@ -19,15 +15,15 @@ export class PoemasComponent {
   public contents : any = contents;
   public counter: number = 1;
 
-    constructor (public service : PoemaService){}
+    constructor (public service : ApiRequestService){}
   ngOnInit(){
     this.service.getPoema().subscribe(response=>{
 
-      for (let i = 0; i < this.contents.length; i++) {
+      for (let i = 0; i < response.length; i++) {
 
         this.contents[i] = {
           imagen: "http://localhost:8001/assets/img/" + response[i].imagen,
-          Titulo: response[i].Titulo,
+          titulo: response[i].titulo,
           texto: response[i].texto
         };
         

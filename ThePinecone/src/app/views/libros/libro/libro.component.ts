@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-libro',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./libro.component.css']
 })
 export class LibroComponent {
-
+  @Input() imagen: string="";
+  @Input() titol: string ="";
+  @Input() descripcion: string ="";
 }

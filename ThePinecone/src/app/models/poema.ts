@@ -8,7 +8,7 @@
 // match the expected interface, even if the JSON is valid.
 
 export interface Poema {
-  Titulo: string;
+  titulo: string;
   imagen: string;
   texto:  string;
 }
@@ -179,7 +179,7 @@ function r(name: string) {
 
 const typeMap: any = {
   "Poema": o([
-      { json: "Titulo", js: "Titulo", typ: "" },
+      { json: "titulo", js: "titulo", typ: "" },
       { json: "imagen", js: "imagen", typ: "" },
       { json: "texto", js: "texto", typ: "" },
   ], false),
