@@ -69,7 +69,7 @@ class PoemaController extends AbstractController
   
 
  */  
-  private function getLastPage($page, $session): int
+ /*  private function getLastPage($page, $session): int
     {
       if ($page != null) {
         $session->set("page",$page);
@@ -79,7 +79,7 @@ class PoemaController extends AbstractController
         return 1;
       }
       return $session->get("page");
-    } 
+    }  */
 }
 
 

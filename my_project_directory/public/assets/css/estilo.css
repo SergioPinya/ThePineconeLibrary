@@ -9,10 +9,22 @@
 	font-size: 50px;
     color: rgba(119, 39, 34, 1);
 }
+@font-face {
+    font-family: fenix;
+  
+    src: url("./assets/tipografia/Fenix/Fenix-Regular.ttf") ;
+}
+
+p,h1,a{
+    font-family: fenix;
+  
+}
 	
 body{
     background-color: rgba(255, 239, 196, 1);
+  
 }
+
 .titulo{
     text-align:center;
 }
