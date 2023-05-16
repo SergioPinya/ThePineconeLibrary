@@ -12,6 +12,7 @@ import { PoemaComponent } from './views/poemas/poema/poema.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContenidoComponent } from './views/contenido/contenido.component';
 import { ContenidosComponent } from './views/contenido/contenidos/contenidos.component';
+import { QuienesSomosComponent } from './views/quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ContenidosComponent } from './views/contenido/contenidos/contenidos.com
     LibroComponent,
     ContenidoComponent,
     ContenidosComponent,
+    QuienesSomosComponent,
     
   ],
   imports: [
