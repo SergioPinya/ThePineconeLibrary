@@ -20,9 +20,8 @@ export class ContenidoComponent {
       for (let i = 0; i < response.length; i++) {
 
         this.contents[i] = {
-          imagen: "http://localhost:8001/assets/img/" + response[i].imagen,
-          titol: response[i].titol,
-          descripcion: response[i].descripcion
+          
+          contenido: response[i].contenido
         };
         
       }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 
 import { ApiRequestService } from "../../services/api-request.service";
  
@@ -13,6 +13,7 @@ export class LibrosComponent {
   public number: number = 1;
   public contents : any = contents;
   public counter: number = 1;
+  @Output() indice=new EventEmitter<number>();
 
     constructor (public service : ApiRequestService){}
   ngOnInit(){
@@ -29,5 +30,9 @@ export class LibrosComponent {
 
     });
   }  
+  public contenido(index:number){
+    this.indice.emit(index)
+  }
+
 }
  
