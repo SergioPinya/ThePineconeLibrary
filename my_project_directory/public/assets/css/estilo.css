@@ -9,6 +9,23 @@
 	font-size: 50px;
     color: rgba(119, 39, 34, 1);
 }
+.logols{
+    font-family: amita;
+	text-decoration: none;
+	font-size: 40px;
+    color: rgba(119, 39, 34, 1);
+}
+.layouts{
+    font-family: fenix;
+	text-decoration: none;
+	font-size: 40px;
+    color: white;
+}
+.logos{
+  
+	width:6em ;
+    
+}
 @font-face {
     font-family: fenix;
   
