@@ -27,6 +27,7 @@ import { QuienesSomosComponent } from './views/quienes-somos/quienes-somos.compo
     ContenidosComponent,
     QuienesSomosComponent,
     
+    
   ],
   imports: [
     BrowserModule,

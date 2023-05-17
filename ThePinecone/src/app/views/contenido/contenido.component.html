@@ -1,1 +1,5 @@
-<!-- <app-contenido  [contenido]="content.contenido"></app-contenido> -->
+<article      *ngFor="let content of contents; let i = index"        >
+     
+
+<app-contenidos  [contenido]="content.contenido"></app-contenidos> 
+</article>
