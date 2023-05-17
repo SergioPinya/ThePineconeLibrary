@@ -1,5 +1,5 @@
 
 
 function myFunction() {
-alert("Se ha publicado tu poema")
+alert("Se ha publicado")
 }
